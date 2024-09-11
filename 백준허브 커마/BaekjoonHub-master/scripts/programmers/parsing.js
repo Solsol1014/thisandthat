@@ -45,7 +45,7 @@ async function parseData() {
 
 async function makeData(origin) {
   const { problem_description, problemId, level, result_message, division, language_extension, title, runtime, memory, code, language } = origin;
-  const directory = await getDirNameByOrgOption(`PS/프로그래머스/${level}/${problemId}. ${convertSingleCharToDoubleChar(title)}`, language);
+  const directory = await getDirNameByOrgOption(`PS/Programmers/${level}/${problemId}. ${convertSingleCharToDoubleChar(title)}`, language);
   //const directory = `seohyun/${problemId}`;
   const levelWithLv = `${level}`.includes('lv') ? level : `lv${level}`.replace('lv', 'level ');
   const message = `[${levelWithLv}] Title: ${title}, Time: ${runtime}, Memory: ${memory} -BaekjoonHub`;
