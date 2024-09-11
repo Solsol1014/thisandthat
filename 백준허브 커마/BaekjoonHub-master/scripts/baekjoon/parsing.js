@@ -46,9 +46,10 @@ async function makeDetailMessageAndReadme(data) {
     code, language, memory, runtime } = data;
   const score = parseNumberFromString(result);
   const directory = await getDirNameByOrgOption(
-    `백준/${level.replace(/ .*/, '')}/${problemId}. ${convertSingleCharToDoubleChar(title)}`,
+    `PS/백준/${level.replace(/ .*/, '')}/${problemId}. ${convertSingleCharToDoubleChar(title)}`,
     langVersionRemove(language, null)
   );
+  // const directory = `seohyun/${problemId}`;
   const message = `[${level}] Title: ${title}, Time: ${runtime} ms, Memory: ${memory} KB`
     + ((isNaN(score)) ? ' ' : `, Score: ${score} point `) // 서브 태스크가 있는 문제로, 점수가 있는 경우 점수까지 커밋 메시지에 표기
     + `-BaekjoonHub`;
